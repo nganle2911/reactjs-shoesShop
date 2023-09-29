@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const HeaderHome = () => {
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="headerHome__nav navbar navbar-expand-sm navbar-dark bg-dark">
             <NavLink className="navbar-brand mx-2" to="/">Shoes Shop</NavLink>
             <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation" />
             <div className="collapse navbar-collapse" id="collapsibleNavId">

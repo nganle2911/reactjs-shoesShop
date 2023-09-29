@@ -1,19 +1,18 @@
 import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
-import style from './ShoesCard.module.css'
 
 const ShoesCard = ({ prod }) => {
     return (
-        <NavLink to={"/detail"}>
-            <div className={`card mb-4 ${style['card-border']}`}>
+        <NavLink to={`/detail/${prod.id}`} className="shoesCard">
+            <div className="card shoesCard__cover mb-4 mt-3">
                 <img src={prod.image} />
                 <div className='card-body'>
-                    <h4>{prod.name}</h4>
-                    <p>short description...</p>
+                    <h4 className='shoesCard__title'>{prod.name}</h4>
+                    <p className="shoesCard__text">short description...</p>
                 </div>
-                <div className={`${style['btn-footer']}`}>
-                    <div className={`${style['btn-buy']}`}>Buy now</div>
-                    <div className={`${style['btn-price']}`}>{prod.price}$</div>
+                <div className="shoesCard__footer">
+                    <div className="shoesCard__btnBuy">Buy now</div>
+                    <div className="shoesCard__btnPrice">{prod.price}$</div>
                 </div>
             </div>
         </NavLink>

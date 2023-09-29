@@ -1,0 +1,4 @@
+.headerHome__nav {
+    @include gradientStyle($blue-0, $blue-1, right);
+    color: $white-0;
+}

@@ -12,6 +12,9 @@ import Search from './Pages/Search/Search';
 import { Provider } from 'react-redux';
 import { store } from './Redux/configStore';
 
+// Main CSS
+import "./assets/sass/main.scss";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -23,7 +26,9 @@ root.render(
             <Route path='login' element={<Login />}></Route>
             <Route path='register' element={<Register />}></Route>
             <Route path='profile' element={<Profile />}></Route>
-            <Route path='detail' element={<Detail />}></Route>
+            <Route path='detail'>
+              <Route path=':id' element={<Detail />}></Route>
+            </Route>
             <Route path='carts' element={<Carts />}></Route>
             <Route path='search' element={<Search />}></Route>
             <Route path='*' element={<Navigate to="/" />}></Route>

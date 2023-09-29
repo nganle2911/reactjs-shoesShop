@@ -1,0 +1,42 @@
+.shoesCard {
+    text-decoration: none;
+}
+
+.shoesCard__cover {
+    border-radius: 0;
+    background-color: $white-0;
+}
+
+.shoesCard__title {
+    font-size: $num-1;
+}
+
+.shoesCard__text {
+    color: $grey-0;
+    font-style: italic;
+}
+
+.shoesCard__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0; 
+}
+
+.shoesCard__btnBuy {
+    width: 50%;
+    text-align: center;
+    font-size: $num-0 + 2;
+    padding: $num-0 - 1 0;
+    font-weight: bold;
+    @include gradientStyle($blue-0, $blue-1, left);
+    color: $white-0;
+}
+
+.shoesCard__btnPrice {
+    width: 50%;
+    text-align: center;
+    font-size: $num-0 + 2;
+    padding: $num-0 - 1 0;
+    font-weight: bold;
+    background-color: $white-1;
+}

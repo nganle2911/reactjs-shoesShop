@@ -1,0 +1,14 @@
+// Helpers
+@import "./Helpers/variables";
+@import "./Helpers/mixin";
+
+// Base
+@import "./Base/reset";
+
+// Components
+@import "./Components/shoesCard";
+@import "./Components/headerHome";
+@import "./Components/footerHome";
+
+// Pages 
+@import "./Pages/home";
