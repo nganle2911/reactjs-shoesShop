@@ -1,0 +1,24 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+const HeaderHome = () => {
+    return (
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+            <NavLink className="navbar-brand mx-2" to="/">Shoes Shop</NavLink>
+            <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation" />
+            <div className="collapse navbar-collapse" id="collapsibleNavId">
+                <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li className="nav-item">
+                        <NavLink className="nav-link active" to="/" aria-current="page">Home</NavLink>
+                    </li>
+                </ul>
+                <form className="d-flex my-2 my-lg-0">
+                    <NavLink to="/carts" className="text-white"><i className='fa fa-cart-plus' style={{fontSize: '25px'}}></i></NavLink>
+                    <NavLink to="/login" className="nav-link text-white mx-3">Login</NavLink>
+                </form>
+            </div>
+        </nav>
+    )
+}
+
+export default HeaderHome
