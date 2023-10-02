@@ -3,4 +3,5 @@
     @include gradientStyle($blue-0, $blue-1, left);
     text-align: center;
     padding: $num-0;
+    height: $num-3 + 10;
 }

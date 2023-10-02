@@ -1,19 +1,49 @@
+.carousel-indicators .btnDot {
+    background-color: $blue-0;
+    width: $num-4 + 2;
+    height: $num-4 + 2;
+    border-radius: 100%;
+}
+
+.carousel-item {
+    margin: 0;
+}
+
 .home__carousel {
     margin: 0;
-    height: '260px';
-    color: '#fff';
-    line-height: '160px';
-    text-align: 'center';
-    background: '#364d79';
+    padding: 0;
+    background: $white-0;
+}
+
+.home__left {
+    text-align: center;
+}
+
+.home__right {
+    position: relative;
+}
+
+.right__content {
+    position: absolute;
+    top: 30%;
 }
 
 .home__title {
     text-align: center;
-    margin-top: 38px;
-    font-size: 52px;
+    margin-top: $num-2 + 8;
+    font-size: $num-3 + 2;
     color: $blue-0;
 }
 
 .home__feature {
     margin: 0 auto;
+}
+
+.home__btnBuy {
+    text-align: center;
+    font-size: $num-0;
+    padding: $num-4 $num-0 - 1;
+    font-weight: bold;
+    @include gradientStyle($blue-0, $blue-1, left);
+    color: $white-0;
 }
