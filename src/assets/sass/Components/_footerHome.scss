@@ -1,21 +1,21 @@
 .footerHome {
     background-color: $white-0;
-    padding-top: 30px;
-    margin-top: 30px;
+    padding-top: $num-2;
+    margin-top: $num-2;
 }
 
 .footerHome__top {
-    margin: 30px auto;
+    margin: $num-2 auto;
     width: 70%;
     margin-top: 0;
 }
 
 .footerHome__top .top__footerItem:nth-child(2) {
-    border-left: 2px solid $white-1;
+    border-left: $num-5 - 3 solid $white-1;
 }
 
 .footerHome__top .top__footerItem:nth-child(3) {
-    border-left: 2px solid $white-1;
+    border-left: $num-5 - 3 solid $white-1;
 }
 
 .footerHome__top .top__footerItem ul {

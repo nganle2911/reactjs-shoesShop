@@ -1,0 +1,77 @@
+.login {
+    margin: auto;
+    width: 35%;
+}
+
+.login__title {
+    text-align: center;
+    margin-top: $num-2;
+    font-weight: 500;
+}
+
+.login__group {
+    margin-top: $num-2;
+    padding: $num-2;
+    border-radius: $num-5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login__group .form-group input {
+    height: $num-3;
+}
+
+.login__group .form-group .form-control::placeholder {
+    color: $grey-0;
+}
+
+.login__group .form-group:nth-child(3) {
+    text-align: center;
+}
+
+.login__group .form-group:nth-child(3) .login__btn {
+    width: 100%;
+    color: $white-0;
+    font-weight: 600;
+    font-size: $num-1;
+    height: $num-3;
+    @include gradientStyle($blue-0, $blue-1, top);
+}
+
+.login__group .form-group:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login__group .form-group:nth-child(4) a {
+    cursor: pointer;
+}
+
+.login .login__other .other__btn {
+    display: flex;
+    width: 100%;
+    height: $num-3;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: $white-2;
+    border-color: $white-0;
+    color: $black-0;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .login__other .other__btn .fab {
+    padding-right: $num-0;
+    font-size: $num-2;
+    color: $blue-2;
+}
+
+.login .login__other .form-group:nth-child(2) .fab {
+    color: $red-0;
+}
+
+.login .login__other .form-group:nth-child(3) .fab {
+    color: $black-0;
+}
+
+.login .login__other .other__btn p {
+    margin-bottom: 0;
+}
