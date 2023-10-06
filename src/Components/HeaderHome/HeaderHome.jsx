@@ -1,7 +1,17 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 const HeaderHome = () => {
+    const { userLogin } = useSelector(state => state.userReducer); 
+
+    const renderLoginButton = () => {
+        if (userLogin) {
+            return <NavLink to="/profile" className={"nav-link mx-3 text-white"}>Hello {userLogin.email}!</NavLink>
+        }
+        return <NavLink to="/login" className="nav-link text-white mx-3">Login</NavLink>
+    }
+
     return (
         <nav className="headerHome__nav navbar navbar-expand-sm navbar-dark bg-dark">
             <NavLink className="navbar-brand mx-2" to="/">Shoes Shop</NavLink>
@@ -14,7 +24,7 @@ const HeaderHome = () => {
                 </ul>
                 <form className="d-flex my-2 my-lg-0">
                     <NavLink to="/carts" className="text-white"><i className='fa fa-cart-plus' style={{fontSize: '25px'}}></i></NavLink>
-                    <NavLink to="/login" className="nav-link text-white mx-3">Login</NavLink>
+                    {renderLoginButton()}
                 </form>
             </div>
         </nav>
