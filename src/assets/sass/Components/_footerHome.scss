@@ -1,4 +1,38 @@
 .footerHome {
+    background-color: $white-0;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.footerHome__top {
+    margin: 30px auto;
+    width: 70%;
+    margin-top: 0;
+}
+
+.footerHome__top .top__footerItem:nth-child(2) {
+    border-left: 2px solid $white-1;
+}
+
+.footerHome__top .top__footerItem:nth-child(3) {
+    border-left: 2px solid $white-1;
+}
+
+.footerHome__top .top__footerItem ul {
+    margin-bottom: 0;
+}
+
+.footerHome__top .top__footerItem .item__title {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.footerHome__top .top__footerItem li {
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.footerHome__bottom {
     color: $white-0;
     @include gradientStyle($blue-0, $blue-1, left);
     text-align: center;

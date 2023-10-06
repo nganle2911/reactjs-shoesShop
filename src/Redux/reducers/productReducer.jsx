@@ -2,11 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
 
 const initialState = {
-  arrProduct: [
-    { id: 1, name: 'product 1', image: 'https://i.pravatar.cc?u=1', price: 1000 },
-    { id: 2, name: 'product 2', image: 'https://i.pravatar.cc?u=7', price: 1500 },
-    { id: 3, name: 'product 3', image: 'https://i.pravatar.cc?u=20', price: 2000 },
-  ],
+  arrProduct: [],
   productDetail: {
     "id": 1,
     "name": "Adidas Prophere",
