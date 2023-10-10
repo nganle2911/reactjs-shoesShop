@@ -1,0 +1,52 @@
+.profile__title {
+    @include titleStyle(center, $num-2, $num-3 + 2, $blue-0);
+}
+
+.profile__info {
+    margin: 0 auto;
+    margin-top: $num-0;
+}
+
+.profile__info .col-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.profile__info .profile__avatar {
+    width: $num-8;
+    height: $num-8;
+    border-radius: 50%;
+}
+
+.info__right .form-group {
+    margin-bottom: $num-0;
+}
+
+.info__right .form-group p {
+    margin-bottom: $num-5;
+}
+
+.info__right .form-group input[type=text] {
+    width: 100%;
+    background-color: $grey-1;
+    border: 1px solid $grey-1;
+    padding: $num-5;
+}
+
+.info__right .form-group span {
+    margin-right: $num-6;
+}
+
+.info__right .form-group label {
+    margin-right: $num-0;
+}
+
+.info__right .profile__btnUpdate {
+    text-align: end;
+}
+
+.info__right .profile__btnUpdate button {
+    @include gradientStyle($blue-0, $blue-1, left);
+    color: $white-0;
+    padding: $num-4 $num-0;
+}

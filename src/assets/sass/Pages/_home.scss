@@ -29,10 +29,7 @@
 }
 
 .home__title {
-    text-align: center;
-    margin-top: $num-2 + 8;
-    font-size: $num-3 + 2;
-    color: $blue-0;
+    @include titleStyle(center, $num-2 + 2, $num-3 + 2, $blue-0);
 }
 
 .home__feature {

@@ -3,3 +3,10 @@
     background: -webkit-linear-gradient(to $position, $color1, $color2);
     background: linear-gradient(to $position, $color1, $color2);
 }
+
+@mixin titleStyle($align, $margin, $fontSize, $color) {
+    text-align: $align;
+    margin-top: $margin;
+    font-size: $fontSize;
+    color: $color;
+}
