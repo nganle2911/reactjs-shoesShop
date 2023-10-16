@@ -7,7 +7,13 @@ const HeaderHome = () => {
 
     const renderLoginButton = () => {
         if (userLogin) {
-            return <NavLink to="/profile" className={"nav-link mx-3 text-white"}>Hello {userLogin.email}</NavLink>
+            return <>
+                <NavLink to="/profile" className={"nav-link mx-3 text-white"}>Hello {userLogin.email}</NavLink>
+                <span style={{cursor: 'pointer', marginRight: '15px'}} onClick={() => {
+                    window.localStorage.clear();
+                    window.location.href = './login';
+                }}>Logout</span>
+            </>
         }
         return <NavLink to="/login" className="nav-link text-white mx-3">Login</NavLink>
     }

@@ -1,7 +1,8 @@
 // rxslice 
 import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
-import { ACCESS_TOKEN, USER_LOGIN, getStore, getStoreJson, saveStore, saveStoreJson } from '../../util/config';
+import { ACCESS_TOKEN, USER_LOGIN, getStore, getStoreJson, http, saveStore, saveStoreJson } from '../../util/config';
+import { history } from '../../index.js';
 
 const initialState = {
     // userLogin: null // not login yet 
@@ -31,11 +32,12 @@ export default userReducer.reducer
 // userLogin = {email, password}
 export const loginApi = (userLogin) => {
     return async dispatch => {
-        const result = await axios({
+        /* const result = await axios({
             url: "https://shop.cyberlearn.vn/api/Users/signin",
             method: "POST",
             data: userLogin
-        }); 
+        });  */
+        const result = await http.post('/api/Users/signin', userLogin);
 
         console.log("obLogin: ", result.data.content);
 
@@ -50,18 +52,22 @@ export const loginApi = (userLogin) => {
         /* // Call api getProfileAction after login successfully 
         const actionGetProfile = getProfileAction();
         dispatch(actionGetProfile); */
+
+        // navigate Profile Page after login
+        history.push('/profile');
     }
 }
 
 export const getProfileApi = () => {
     return async dispatch => {
-        const result = await axios({
+        /* const result = await axios({
             url: "https://shop.cyberlearn.vn/api/Users/getProfile",
             method: "POST",
             headers: {
                 Authorization: `Bearer ${getStore(ACCESS_TOKEN)}`
             }
-        });
+        }); */
+        const result = await http.post('/api/Users/getProfile');
 
         const action = getProfileAction(result.data.content);
         dispatch(action); 
