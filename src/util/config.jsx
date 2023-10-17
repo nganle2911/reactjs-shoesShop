@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { history } from '../index.js';
 export const ACCESS_TOKEN = 'accessToken';
 export const USER_LOGIN = 'userLogin';
 
@@ -53,3 +54,22 @@ http.interceptors.request.use((config) => {
 
 
 // Config for all response api 
+http.interceptors.response.use((res) => {
+
+    return res; 
+}, (err) => {
+    // Catch error 400 or 404
+    if (err.response?.status === 400 || err.response?.status === 404) {
+        // Noti of error 
+        alert("Parameter invalid!");
+        // navigate to home page 
+        history.push('/');
+    }
+
+    // Catch error 401 or 403
+    if (err.response?.status === 401 || err.response?.status === 403) {
+        history.push('/login');
+    }
+    
+    return Promise.reject(err);
+}); 

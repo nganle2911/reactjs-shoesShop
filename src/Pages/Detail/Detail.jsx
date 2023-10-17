@@ -18,17 +18,17 @@ const Detail = () => {
     <div className='container'>
       <div className='row mt-3'>
         <div className='col-4'>
-          <img src={productDetail.image} alt='...' width={"100%"} />
+          <img src={productDetail?.image} alt='...' width={"100%"} />
         </div>
         <div className='col-8'>
-          <h3>{productDetail.name}</h3>
-          <p>{productDetail.description}</p>
+          <h3>{productDetail?.name}</h3>
+          <p>{productDetail?.description}</p>
         </div>
       </div>
       <div className='mt-2'>
         <h3>Related Products</h3>
         <div className='row'>
-          {productDetail.relatedProducts?.map((item, index) => {
+          {productDetail?.relatedProducts?.map((item, index) => {
             return <div className='col-4' key={index}>
               <ShoesCard prod={item} />
             </div>

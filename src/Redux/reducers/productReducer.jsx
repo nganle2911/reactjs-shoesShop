@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
+import { http } from '../../util/config';
 
 const initialState = {
   arrProduct: [],
-  productDetail: {
+  productDetail: null
+  /* productDetail: {
     "id": 1,
     "name": "Adidas Prophere",
     "alias": "adidas-prophere",
@@ -68,7 +70,7 @@ const initialState = {
         "image": "https://shop.cyberlearn.vn/images/adidas-swift-run.png"
       }
     ]
-  }
+  } */
 }
 
 const productReducer = createSlice({
@@ -96,10 +98,12 @@ export default productReducer.reducer
 */
 // * async action
 export const getProductApi = async (dispatch2) => {
-  const result = await axios({
+  /* const result = await axios({
     url: "https://shop.cyberlearn.vn/api/product",
     method: 'GET'
-  });
+  }); */
+
+  const result = await http.get('/api/product');
 
   // Sau khi có được dữ liệu từ api, ta tạo ra action loại 1 {type, payload đưa lên redux}
   // const action2 = {
@@ -132,10 +136,11 @@ export const getProductApi = async (dispatch2) => {
 // because having param => using closure function
 export const getDetailProductApi = (id) => {
   return async (dispatch) => {
-    const result = await axios({
+    /* const result = await axios({
       url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
       method: 'GET'
-    }); 
+    }); */ 
+    const result = await http.get(`/api/Product/getbyid?id=${id}`); 
 
     const action = getDetailProductAction(result.data.content);
     dispatch(action);
